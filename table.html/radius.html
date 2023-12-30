@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>
+        Volume of Sphere
+    </title>
+</head>
+    <body>
+        <input type="number" id="inputField">
+        <button onclick="calculateVolume()">Submit</button>
+        <div id="result"></div>
+
+        <script>
+            function calculateVolume(){
+                var radius = parseFloat(document.getElementById("inputField").value);
+
+                if (!isNaN(radius)) {
+                var volume = (4.0 / 3.0) * Math.PI * Math.pow(radius, 3);
+                document.getElementById("result").innerHTML = "The volume of the sphere is: " +volume.toFixed(2);
+            } else {
+                document.getElementById("result").innerHTML = "Please enter a valid number for the radius.";
+            }
+            
+            }
+        </script>
+    </body>
+</html>
